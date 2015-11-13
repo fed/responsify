@@ -1,0 +1,33 @@
+{
+  "name": "responsify",
+  "version": "0.0.0",
+  "description": "Responsify Mixin for Less, Sass and Stylus",
+  "keywords": [
+    "responsify"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Federico Knussel",
+    "email": "fknussel@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fknussel/responsify.git"
+  },
+  "scripts": {
+    "test": "./node_modules/grunt-cli/bin/grunt test"
+  },
+  "main": "src/responsify.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bump": "^0.6.0",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-git-committers": "^0.1.4",
+    "grunt-jest": "^0.2.0",
+    "grunt-templated-changelog": "^0.1.3",
+    "jest-cli": "^0.7.1",
+    "load-grunt-config": "^0.18.0"
+  }
+}
