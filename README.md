@@ -1,24 +1,50 @@
 # responsify
 
-Responsify Mixin for Less, Sass and Stylus
+Responsify Mixin for Less.
 
 ## Install
 
 ```
-npm install --save responsify
+npm install --save-dev responsify
 ```
 
-## Run Tests
+## Usage
+
+Adjust the variables on the `src/responsify.less` file to match your design and then write your media queries on variables, like this:
 
 ```
-grunt test
+.about {
+  width: 100%;
+}
+
+@sm: {
+  .about {
+    width: 50%;
+  }
+};
+
+@lg: {
+  .about {
+    display: none;
+  }
+};
 ```
 
-If you don't want to install `grunt-cli` globally, you can also run:
+Once you are done writing styles for each breakpoint, include the responsify mixin and pass in all of these variables you've just created:
 
 ```
-npm test
+.responsify({}, @sm, {}, @lg, {});
 ```
+
+The responsify mixin expects the following arguments to get passed in:
+
+1. `@xs`: larger than mobile
+2. `@sm`: larger than phablet
+3. `@md`: larger than tablet
+4. `@lg`: larger than desktop
+5. `@xl`: larger than desktop HD
+
+Use `{}` if you don't have styles defined for that particular breakpoint. Note that, since this is mobile first, styles will *cascade up* if no styles get passed in for one of the breakpoints.
 
 ## Release Versions
 

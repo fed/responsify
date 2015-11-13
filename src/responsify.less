@@ -1,0 +1,35 @@
+@breakpoint-xs: 400px;  // larger than mobile
+@breakpoint-sm: 550px;  // larger than phablet
+@breakpoint-md: 750px;  // larger than tablet
+@breakpoint-lg: 1000px; // larger than desktop
+@breakpoint-xl: 1200px; // larger than desktophd
+
+.responsify (@xs, @sm, @md, @lg, @xl) {
+  // This is mobile first: anything between
+  // 320px and 400px will be outside of this mixin
+
+  // Larger than mobile
+  @media only screen and (min-width: @breakpoint-xs) {
+    @xs();
+  }
+
+  // Larger than phablet
+  @media only screen and (min-width: @breakpoint-sm) {
+    @sm();
+  }
+
+  // Larger than tablet
+  @media only screen and (min-width: @breakpoint-md) {
+    @md();
+  }
+
+  // Larger than desktop
+  @media only screen and (min-width: @breakpoint-lg) {
+    @lg();
+  }
+
+  // Larger than Desktop HD
+  @media only screen and (min-width: @breakpoint-xl) {
+    @xl();
+  }
+}
